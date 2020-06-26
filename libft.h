@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 15:57:09 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/26 16:25:48 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/26 17:46:42 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isupper(int a);
 int					ft_islower(int a);
 int					ft_lst_len(t_list *content);
+void				ft_lstpushbach(t_list **head, t_list *new);
 t_list				*ft_lstfindnode(t_list *content, void *value);
-
 #endif

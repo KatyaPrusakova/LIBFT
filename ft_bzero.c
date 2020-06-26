@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 14:10:06 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/26 12:20:45 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/26 16:24:33 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 void		ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	char		*i;
+
+	i = s;
+	while (n)
+	{
+		*i = 0;
+		i++;
+		n--;
+	}
 }

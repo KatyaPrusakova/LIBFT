@@ -6,56 +6,48 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 11:13:58 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/26 11:20:20 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/26 16:19:02 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		ft_len(int n)
+static	int		ft_len(int n, int sign)
 {
 	int			len;
 
 	len = 0;
 	if (n == 0)
-		len++;
-	if (n < 0)
-	{
-		n = n * -1;
-		len++;
-	}
+		return (1);
 	while (n > 0)
 	{
 		n = n / 10;
 		len++;
 	}
+	len = len + (sign ? 1 : 0);
 	return (len);
 }
 
 char			*ft_itoa(int n)
 {
-	int			len;
-	long		nb;
 	char		*str;
+	int			sign;
+	int			len;
 
-	nb = n;
-	len = ft_len(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if (!(str = (char*)malloc(sizeof(char) * (len))))
-		return (NULL);
-	if (nb == 0)
-		str[0] = '0';
-	str[len--] = '\0';
-	if (nb < 0)
+	sign = (n < 0 ? 1 : 0);
+	n = (sign ? -n : n);
+	len = ft_len(n, sign);
+	if (!(str = ft_strnew(len)))
+		return (0);
+	while (len)
 	{
+		len--;
+		str[len] = n % 10 + '0';
+		n = n / 10;
+	}
+	if (sign)
 		str[0] = '-';
-		nb = nb * -1;
-	}
-	while (nb > 0)
-	{
-		str[len--] = (nb % 10) + 48;
-		nb = nb / 10;
-	}
 	return (str);
 }

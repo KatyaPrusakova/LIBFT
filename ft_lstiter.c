@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 11:13:58 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/26 12:29:20 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/26 16:20:58 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void		ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 	{
 		while (temp)
 		{
-			f(temp);
+			(*f)(temp);
 			temp = temp->next;
 		}
 	}

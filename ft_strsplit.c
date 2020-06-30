@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 11:13:58 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/23 18:10:22 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 10:38:39 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ static	int			ft_countwords(const char *s, char c)
 	n = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		while (s[i] == c)
 			i++;
 		while (s[i] != c && s[i])
 		{
-			n++;
 			i++;
 		}
+		n++;
 	}
 	return (n);
 }
@@ -38,7 +38,7 @@ static char			*ft_ftstrndup(const char *s1, size_t n)
 	char			*new;
 
 	i = 0;
-	new = (char *)malloc(sizeof(new) * n);
+	new = (char *)malloc(sizeof(*new) * (n + 1));
 	if (!new)
 		return (0);
 	while (i < n)
@@ -52,9 +52,9 @@ static char			*ft_ftstrndup(const char *s1, size_t n)
 
 char				**ft_strsplit(char const *s, char c)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	w;
+	size_t			i;
+	size_t			j;
+	size_t			w;
 	char			**new;
 
 	i = 0;
@@ -63,7 +63,7 @@ char				**ft_strsplit(char const *s, char c)
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		while (s[i] == c)
 			i++;
 		j = i;
 		while (s[i] != c && s[i])

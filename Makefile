@@ -6,7 +6,7 @@
 #    By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/05 14:47:24 by eprusako          #+#    #+#              #
-#    Updated: 2020/06/26 17:39:56 by eprusako         ###   ########.fr        #
+#    Updated: 2020/06/30 09:54:39 by eprusako         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,11 @@ FLAG = -Wall -Wextra -Werror
 
 HDDIRS=-I ./
 
-CC = gcc
+CC = @gcc
+
+AR = @ar rc
+
+RUN = @ranlib
 
 SRC =	ft_bzero.c \
 		ft_strcat.c \
@@ -89,10 +93,10 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) $(CFLAGS) -c $(SRC) $(SRC2) $(HDDIRS)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME): $(SRC)
+	$(CC) $(CFLAGS) -c $(SRC) $(HDDIRS)
+	$(AR) $(NAME) $(OBJ)
+	$(RUN) $(NAME)
 	@echo "\033[32mBuilt library.\033[0m"
 
 clean:

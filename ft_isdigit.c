@@ -6,11 +6,9 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 14:10:06 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/11 15:54:11 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:25:38 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isdigit(int a)
 {

@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 11:13:58 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/23 17:49:33 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:34:38 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_strclr(char *s)
 {
-	unsigned int i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

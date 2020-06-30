@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 14:10:06 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/15 16:26:44 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:35:41 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char		*ft_strcat(char *dst, const char *src)
 {
-	int i;
-	int ii;
+	size_t		i;
+	size_t		ii;
 
 	i = 0;
 	ii = 0;

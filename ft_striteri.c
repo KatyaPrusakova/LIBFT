@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 11:13:58 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/16 18:02:28 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:32:01 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (s[i] != '\0')

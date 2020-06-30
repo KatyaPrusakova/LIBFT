@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 11:13:58 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/25 14:24:04 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:45:10 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		l;
-	char	*new;
+	size_t		l;
+	char		*new;
 
 	new = (char*)malloc(sizeof(*new) * (len));
 	if (!new)

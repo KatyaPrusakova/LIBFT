@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 11:13:58 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/26 15:43:27 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:41:11 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char		*ft_strstr(const char *big, const char *little)
 {
-	unsigned int		i;
-	unsigned int		j;
-	int					len;
+	size_t		i;
+	size_t		j;
+	int			len;
 
 	i = 0;
 	len = 0;

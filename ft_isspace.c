@@ -6,11 +6,9 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 14:10:06 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/26 17:47:32 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:33:28 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isspace(int a)
 {

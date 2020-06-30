@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 15:57:09 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/26 17:46:42 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:38:55 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,8 @@
 
 # include <unistd.h>
 # include <string.h>
-# include <stdint.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <ctype.h>
-# include <stdbool.h>
 
 typedef	struct		s_list
 {

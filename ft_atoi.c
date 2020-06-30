@@ -6,11 +6,9 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 14:10:06 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/26 17:35:41 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:36:19 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_atoi(const char *str)
 {
@@ -33,7 +31,7 @@ int		ft_atoi(const char *str)
 		res = 10 * res + (*str - '0');
 		str++;
 	}
-	if (res > 21474836479 || res < -2147483649)
+	if (res > 2147483649 || res < -2147483649)
 		return (0);
 	return ((res * sign));
 }

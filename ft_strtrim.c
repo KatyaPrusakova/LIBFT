@@ -6,7 +6,7 @@
 /*   By: eprusako <eprusako@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 11:13:58 by eprusako          #+#    #+#             */
-/*   Updated: 2020/06/25 11:18:27 by eprusako         ###   ########.fr       */
+/*   Updated: 2020/06/30 09:46:37 by eprusako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char		*ft_strtrim(char const *s)
 {
-	unsigned int		i;
-	unsigned int		ii;
-	unsigned int		len;
-	char				*new;
+	size_t		i;
+	size_t		ii;
+	size_t		len;
+	char		*new;
 
 	i = 0;
 	while (*s && (*s == ' ' || *s == '\n' || *s == '\t'))
